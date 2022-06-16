@@ -1,0 +1,38 @@
+.header { 
+    background-color: #212121 !important;
+    position: fixed;
+    height: 9%;
+    top: 0; 
+    left: 0; 
+    right: 0; 
+}
+
+img { 
+    float: left; 
+    position: relative;
+    height: 40%;
+    top: 50%;
+    transform: translateY(-50%);
+    padding:2%;
+
+}
+
+button { 
+    background-color: transparent;
+    position: relative;
+    float: right; 
+    padding:1% 3%;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: white;
+    vertical-align: middle;
+    outline:none;
+    box-shadow: none;
+    border: none;
+    font-size: 100%; 
+}
+
+button:not(:disabled):not(.disabled) {
+    cursor: pointer;
+}
