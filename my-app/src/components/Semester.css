@@ -1,0 +1,9 @@
+.semester { 
+    position: relative; 
+    top: 100px; 
+    clear:both;
+    height:fit-content;
+    min-height: 100px;
+    width:50%;
+    overflow: hidden;
+}

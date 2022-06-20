@@ -1,0 +1,11 @@
+.course { 
+    border: 1px solid #999999;
+    border-radius: 5px;
+    width: 100px;
+    height: 100px; 
+    position: relative; 
+    margin: 0.25%;
+    float: left; 
+    cursor:pointer;
+
+}
