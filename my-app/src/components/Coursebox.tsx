@@ -10,7 +10,7 @@ export default function Coursebox(props: courseProps) {
 
     return (
      <div className="course" style={{backgroundColor: props.courseColor}}>
-        <h3>MA293</h3>
+        <h4>MA293</h4>
     </div>
     );
 }

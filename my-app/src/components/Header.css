@@ -2,9 +2,11 @@
     background-color: #212121 !important;
     position: fixed;
     height: 9%;
+    width:100%;
     top: 0; 
     left: 0; 
     right: 0; 
+    z-index:1;
 }
 
 img { 

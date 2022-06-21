@@ -9,6 +9,10 @@ export default function Semester() {
 
     return (
         <div className="semester">
+            <div className="title"> 
+                <text>Freshman 1</text>
+            </div>
+            
             <Coursebox courseColor='#ff9897'/> 
             <Coursebox courseColor='#ff9897'/> 
             <Coursebox courseColor='#ff9897'/> 
@@ -17,5 +21,5 @@ export default function Semester() {
 
         </div>
     );
-  }
+}
 
