@@ -5,8 +5,27 @@ interface courseProps  {
     courseColor: string; 
 }
 
+export function EmptyCourse() { 
 
-export default function Coursebox(props: courseProps) {
+    return (
+        <div className="course" id = "empty"> 
+            <div className="add">
+                &#43;
+                <p>Add course</p>
+            </div>
+           
+    
+
+        </div>
+
+
+    );
+    
+
+}
+
+
+export function Coursebox(props: courseProps) {
 
     return (
      <div className="course" style={{backgroundColor: props.courseColor}}>
@@ -14,3 +33,4 @@ export default function Coursebox(props: courseProps) {
     </div>
     );
 }
+

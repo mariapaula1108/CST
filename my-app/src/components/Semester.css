@@ -14,6 +14,49 @@
     font-size: 1.5rem;
     line-height: 1.2;
     text-align: left; 
-    font-weight:400;
+    font-weight:500;
 
+}
+
+a { 
+    color: #007bff; 
+    text-decoration: none;
+}
+
+input {
+    font-family: inherit;
+    font-size: inherit;
+    line-height:inherit;
+    margin-bottom: 1%;
+
+
+}
+
+input #value { 
+    color: #6c757d; 
+}
+
+.clear { 
+    font-family: inherit; 
+    background-color: transparent;
+    box-shadow: none;
+    outline:none;
+    border-radius: 5px;
+    border: 0.8554px solid #6c757d;
+    padding:0.25rem 0.5rem;
+    line-height:1.5; 
+    color:#6c757d; 
+    float:left; 
+    clear:both;
+    margin-top: 2%; 
+    cursor:pointer;
+    font-size:0.875rem;
+    font-weight:500;
+
+}
+
+.clear:hover{ 
+    transition: 0.15s ease-in-out ;
+    background-color: #6c757d;
+    color:white;
 }

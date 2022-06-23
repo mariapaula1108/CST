@@ -19,7 +19,7 @@ img {
 
 }
 
-button { 
+.logout { 
     background-color: transparent;
     position: relative;
     float: right; 
@@ -35,6 +35,6 @@ button {
     font-size: 100%; 
 }
 
-button:not(:disabled):not(.disabled) {
+.logout:not(:disabled):not(.disabled) {
     cursor: pointer;
 }

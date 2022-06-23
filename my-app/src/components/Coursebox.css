@@ -15,6 +15,11 @@
 
 }
 
+#empty { 
+    border:1px solid #cccccc
+    
+}
+
 h4 { 
     font-size: 12px;
     line-height: .5;
@@ -22,3 +27,24 @@ h4 {
     margin-left:2%; 
 
 }
+
+.add { 
+    font-size:30px; 
+    color:#999999;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    position:absolute;
+    text-align: center; 
+    width:100%;
+    margin:0;
+}
+
+p { 
+    text-align: center; 
+    color: #999999;
+    margin:5%;
+    font-size:13px;
+}
+
