@@ -14,8 +14,8 @@ export default function Degree() {
                 <h3>Degree requirements</h3>
                 <b>BME 2024 (133 Credits)</b> 
             </div>
-            <DegreeSemester semester={"Freshman 1"}/>
-            <DegreeSemester semester={"Freshman 2"}/>
+            <DegreeSemester semester={"Freshman 1"} semesterid={'1'}/>
+            <DegreeSemester semester={"Freshman 2"} semesterid={'2'}/>
             
         </div>
     );

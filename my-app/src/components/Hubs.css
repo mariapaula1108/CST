@@ -27,3 +27,36 @@ b {
     font-size:0.85rem;
 }
 
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+    cursor: help;
+  }
+  
+  /* Tooltip text */
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    min-width: 50%;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5%;
+    border-radius: 6px;
+    columns: auto;
+
+
+   
+
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 4%;
+    margin-left: 0px;
+  
+  }
+  
+  /* Show the tooltip text when you mouse over the tooltip container */
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }

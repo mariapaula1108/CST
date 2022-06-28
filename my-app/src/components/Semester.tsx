@@ -1,11 +1,11 @@
-import React, {useState}from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import './Semester.css';
 import  {Coursebox, EmptyCourse} from './Coursebox';
-
-
+import { CourseContext } from './CourseContext';
 
 interface semesterProps { 
     semester: string; 
+    semesterid?:string; 
 
 }
 
@@ -19,9 +19,13 @@ export function DegreeSemester(props: semesterProps) {
             
         </div>
         {/* render courseboxes based on type of semester passed in  */}
-        {  Array.from({length: 5}, () => <Coursebox courseColor = '#ff9897' />) 
+          <Coursebox courseColor = '#ff9897' degCourseId={props.semesterid + '1'}/>
+          <Coursebox courseColor = '#ffdbb5' degCourseId={props.semesterid + '2'}/>
+          <Coursebox courseColor = '#ff9897' degCourseId={props.semesterid + '3'}/>
+          <Coursebox courseColor = '#ffdbb5' degCourseId={props.semesterid + '4'}/>
+          <Coursebox courseColor = '#ffdbb5' degCourseId={props.semesterid + '5'}/>
 
-        }
+        
     </div>
     ); 
 
@@ -30,8 +34,15 @@ export function DegreeSemester(props: semesterProps) {
 
 
 export function Semester(props: semesterProps) {
-    const [id, setId] = useState(props.semester); 
+    console.log("Semester rerendering..")
+    const [isCleared, setClear] = useState(false);
+  
 
+    function handleClick() { 
+        
+
+
+    }
     return (
         <div className="semester" id={props.semester}>
             <div className="title"> 
@@ -48,11 +59,18 @@ export function Semester(props: semesterProps) {
                 
             </div>
             {/* render courseboxes based on type of semester passed in  */}
-            {  
-                Array.from({length: 6}, () => <EmptyCourse />)
-            }
+              
+                <EmptyCourse courseid={props.semesterid + '1'} />
+                <EmptyCourse courseid={props.semesterid + '2'} />
+                <EmptyCourse courseid={props.semesterid + '3'}  />
+                <EmptyCourse courseid={props.semesterid + '4'} />
+                <EmptyCourse courseid={props.semesterid + '5'} />
+                <EmptyCourse courseid={props.semesterid + '6'} />
 
-            <button type= 'button' className='clear'>Clear</button>
+
+            
+
+            <button type= 'button' className='clear' onClick={() => handleClick()}>Clear</button>
         </div>
     );
 }

@@ -60,7 +60,28 @@ export default function Hubs() {
         </div>
       </div>
       
-     
+      <div className="tooltip">Hub Units Legend
+        <span className="tooltiptext">QR1 = Quantitative Reasoning 1 <br></br>
+        QR2 = Quantitative Reasoning 2<br></br>
+        SI1 = Scientific Reasoning 1<br></br>
+        SI2 = Scientific Reasoning 2<br></br>
+FYW = First-Year Writing Seminar<br></br>
+WRI = Writing, Research & Inquiry<br></br>
+WIN = Writing-Intensive Course<br></br>
+OSC = Oral and/or Signed Communication<br></br>
+DME = Digital/Multimedia Expression<br></br>
+CRT = Critical Thinking<br></br>
+RIL = Research and Information Literacy<br></br>
+TWC = Teamwork/Collaboration<br></br>
+CRI = Creativity/Innovation<br></br>
+PLM = Philosophical Inquiry and Life’s Meanings<br></br>
+AEX = Aesthetic Exploration<br></br>
+HCO = Historical Consciousness<br></br>
+SO = Social Inquiry<br></br>
+IIC = The Individual in Community<br></br>
+GCI = Global Citizenship & Intercultural Literacy<br></br>
+ETR = Ethical Reasoning</span>
+      </div>
     
     
 
