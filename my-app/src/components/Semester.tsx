@@ -12,6 +12,7 @@ interface semesterProps {
 
 
 export function DegreeSemester(props: semesterProps) { 
+    // semesters on the right 
     return (
         <div className="semester" id={"Degree"}>
         <div className="title"> 
@@ -34,15 +35,9 @@ export function DegreeSemester(props: semesterProps) {
 
 
 export function Semester(props: semesterProps) {
-    console.log("Semester rerendering..")
-    const [isCleared, setClear] = useState(false);
-  
+    // semesters on the left
+    // idk these probably could be combined into one semester-- todo
 
-    function handleClick() { 
-        
-
-
-    }
     return (
         <div className="semester" id={props.semester}>
             <div className="title"> 
@@ -70,7 +65,7 @@ export function Semester(props: semesterProps) {
 
             
 
-            <button type= 'button' className='clear' onClick={() => handleClick()}>Clear</button>
+            <button type= 'button' className='clear'>Clear</button>
         </div>
     );
 }
