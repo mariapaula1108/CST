@@ -6,10 +6,11 @@ export const CourseContext = React.createContext({
     storeColor: (color: string) => {}, 
     selectedid: '', 
     storeId: (id: string) => {},
-    refid: '', 
-    storeRef: (refid:string) => {},
     delid: '',
     storeDel: (delid:string) => {},
+    clearedid: '',
+    storeCleared: (clearedid:string) => {},
+
 
   });
   

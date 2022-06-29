@@ -1,6 +1,6 @@
 import React, {useEffect, useRef, useState} from 'react';
 import './Column.css';
-import  {Semester} from './Semester';
+import  Semester from './Semester';
 import Hubs from './Hubs'; 
 
 
@@ -20,9 +20,9 @@ export default function Plan() {
             </div>
 
 
-            <Semester semester={"AP"} semesterid={'1'}/>
-            <Semester semester={"Transfer"} semesterid={'2'}/>
-            <Semester semester={"Fall"}semesterid={'3'} />
+            <Semester semester={"AP"} semesterid={'1'}isPlan={true}/>
+            <Semester semester={"Transfer"} semesterid={'2'}isPlan={true}/>
+            <Semester semester={"Summer"}semesterid={'3'}isPlan={true} />
             
             
 

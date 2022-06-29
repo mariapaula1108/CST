@@ -1,6 +1,6 @@
 import React from 'react';
 import './Column.css';
-import  {DegreeSemester} from './Semester';
+import  Semester from './Semester';
 
 
 
@@ -14,8 +14,8 @@ export default function Degree() {
                 <h3>Degree requirements</h3>
                 <b>BME 2024 (133 Credits)</b> 
             </div>
-            <DegreeSemester semester={"Freshman 1"} semesterid={'1'}/>
-            <DegreeSemester semester={"Freshman 2"} semesterid={'2'}/>
+            <Semester semester={"Freshman 1"} semesterid={'1'} isPlan={false}/>
+            <Semester semester={"Freshman 2"} semesterid={'2'}isPlan={false}/>
             
         </div>
     );

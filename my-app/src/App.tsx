@@ -13,8 +13,8 @@ function App() {
   const [name, setName] = useState('');
   const [color, setColor] = useState('');
   const [selectedid, setId] = useState('');
-  const [refid, setRef] = useState('');
   const [delid, setDel] = useState('');
+  const [clearedid, setClearedId] = useState('');
 
   function storeName (newname:string) { 
     setName(name => (newname))
@@ -31,18 +31,23 @@ function App() {
     // console logs for debugging purposes
     console.log("ID", newid); 
 
-  }
-
-  function storeRef (ref:string) { 
-    setRef(r => (ref)); 
-    console.log("Referenced", ref); 
 
   }
+
+  
 
   function storeDel (del:string) { 
     setDel(d => (del)); 
     console.log("Deleted", del); 
+  
 
+  }
+
+  function storeCleared (cleared:string) { 
+    setClearedId(i => (cleared)); 
+    console.log("Cleared planned course", cleared); 
+    console.log("Clearedid: ", clearedid)
+  
   }
 
 
@@ -58,7 +63,7 @@ function App() {
           <h1> Program Planning</h1> <h3 style={{display: "inline"}}> for venika</h3> 
         </div> 
         {/* this provides an initial value for the variables and their associated functions for any children components to access*/}
-        <CourseContext.Provider value = {{name, storeName, color, storeColor, selectedid, storeId, refid, storeRef, delid,storeDel}} > 
+        <CourseContext.Provider value = {{name, storeName, color, storeColor, selectedid, storeId, delid,storeDel, clearedid, storeCleared}} > 
       
         <Plan/>
         <Degree/>
