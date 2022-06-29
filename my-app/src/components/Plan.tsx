@@ -2,7 +2,7 @@ import React, {useEffect, useRef, useState} from 'react';
 import './Column.css';
 import  {Semester} from './Semester';
 import Hubs from './Hubs'; 
-
+import SemesterMenu from './SemesterMenu';
 
 
 export default function Plan() {
@@ -25,7 +25,7 @@ export default function Plan() {
             <Semester semester={"Fall"}semesterid={'3'} />
             
             
-
+            <SemesterMenu/>
            
 
             <Hubs/>

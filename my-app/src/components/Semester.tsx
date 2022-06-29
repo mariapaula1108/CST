@@ -53,7 +53,7 @@ export function Semester(props: semesterProps) {
                 props.semester === 'Transfer' && <text>Transfer (No Hub Units)</text>
             }
             { 
-                props.semester === ('Fall' || 'Summer' || 'Spring') && <form><label htmlFor='year'>{props.semester}</label> <input type="text" id="year" name="year" placeholder={"Enter year"}/> </form>
+                ((props.semester === "Fall") || (props.semester === "Summer(BU)") || (props.semester === "Spring")) && <form><label htmlFor="year">{props.semester}</label> <input type="text" id="year" name="year" placeholder={"Enter year"}/> </form>
             }
                 
                 
