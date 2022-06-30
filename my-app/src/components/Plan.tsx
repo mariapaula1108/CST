@@ -23,7 +23,7 @@ export default function Plan() {
             <Semester semester={"AP"} semesterid={'1'}/>
             <Semester semester={"Transfer"} semesterid={'2'}/>
             <Semester semester={"Fall"}semesterid={'3'} />
-            
+
             
             <SemesterMenu/>
            

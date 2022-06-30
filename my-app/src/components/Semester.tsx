@@ -2,6 +2,7 @@ import React, { useState, useEffect, useContext } from 'react';
 import './Semester.css';
 import  {Coursebox, EmptyCourse} from './Coursebox';
 import { CourseContext } from './CourseContext';
+import SemesterMenu from './SemesterMenu'
 
 interface semesterProps { 
     semester: string; 
@@ -34,13 +35,10 @@ export function DegreeSemester(props: semesterProps) {
 
 
 export function Semester(props: semesterProps) {
-    console.log("Semester rerendering..")
     const [isCleared, setClear] = useState(false);
-  
 
     function handleClick() { 
         
-
 
     }
     return (

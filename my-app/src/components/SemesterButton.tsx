@@ -1,5 +1,6 @@
 
 import React, { useEffect, useState } from 'react';
+import './SemesterButton.css'
 
 type DropDownProps = {
   semesters: string[];
@@ -29,7 +30,7 @@ const DropDown: React.FC<DropDownProps> = ({
   }, [showDropDown]);
 
   return (
-    <>
+    <><div className='AddButton'>
       <div className={showDropDown ? 'dropdown' : 'dropdown active'}>
         {semesters.map(
           (semester: string, index: number): JSX.Element => {
@@ -45,6 +46,7 @@ const DropDown: React.FC<DropDownProps> = ({
             );
           }
         )}
+      </div>
       </div>
     </>
   );

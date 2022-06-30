@@ -1,9 +1,8 @@
-import react from 'react'
+import React from 'react'
 import { useState } from 'react';
-import ReactDOM from 'react-dom';
 import DropDown from "./SemesterButton";
 import { Semester } from "./Semester";
-import Switch from "react-switch";
+
 
 
 
@@ -11,13 +10,20 @@ import Switch from "react-switch";
 const SemesterMenu: React.FC = (): JSX.Element => {
     const [showDropDown, setShowDropDown] = useState<boolean>(false);
     const [selectSem, setSelectSem] = useState<string>("");
-    const [semesterList,setArray] = useState<string[]>([])
-    const [count, setCount] = useState<number>(4)
-    let num = ""
-   
+    const [count, setCount] = useState<number>(4)  /* Count initialized as 4 since the website has 3 courses by default */
+    
     const semesters = () => {
         return ["Fall", "Spring", "Summer(BU)"];
     };
+
+    /* Create array for the selected semester and the courseid */
+    const [semesterList, setList] = useState<{
+        selectedSem: string;
+        courseid: string
+    }[]>(
+        [],
+    );
+
 
     /** Toggle dropdown menu */
     const toggleDropDown = () => {
@@ -26,7 +32,7 @@ const SemesterMenu: React.FC = (): JSX.Element => {
 
     /** Hide menu if click occurs outside of element.
      @param event  mouse event */
-     
+
     const dismissHandler = (event: React.FocusEvent<HTMLButtonElement>): any => {
         if (event.currentTarget === event.target) {
             let sem = event.currentTarget.value
@@ -36,30 +42,34 @@ const SemesterMenu: React.FC = (): JSX.Element => {
 
     /**
      @param semester  selected semester */
+     
     const semesterSelection = (semester: string): any => {
-        semesterList.push(semester)
-        setCount(count +1)
-        num = '2'
-        console.log(num)
-        setSelectSem(semester)  
-        
+        setCount(count + 1)
+        setList(prevList => [   /* Push the selected semester and count+1 to array */
+            ...prevList,
+            { selectedSem: semester, courseid: count.toString() },
+        ])
+        setSelectSem(semester)
     };
 
     return (
-     
-        <>
-        {semesterList.map(data => {
-              return ( 
-                <Semester semester={data} semesterid= {num} /> 
-              )})}
-            <button
-                className={showDropDown ? "active" : undefined}
-                onClick={() : void => toggleDropDown()}
+
+        <> 
+            {semesterList.map((data, index) => {  
+                return (<>
+                    <div key={index}></div>
+                    <Semester semester={data.selectedSem} semesterid={data.courseid} /> </>
+                )
+            })}
+            
+            <button 
+                className={showDropDown ? "active" : undefined}   
+                onClick={(): void => toggleDropDown()}
                 onBlur={(e: React.FocusEvent<HTMLButtonElement>): void =>
                     dismissHandler(e)
                 }
             >
-                <div>{ "Add Semester +"} </div>
+                <div>{"Add Semester +"} </div>
                 {showDropDown && (
                     <DropDown
                         semesterSelection={semesterSelection}
@@ -67,7 +77,7 @@ const SemesterMenu: React.FC = (): JSX.Element => {
                         showDropDown={false}
                         toggleDropDown={(): void => toggleDropDown()}
 
-                       
+
                     />
                 )}
             </button>
