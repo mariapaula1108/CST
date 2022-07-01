@@ -11,3 +11,19 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.popover { 
+  min-width:276px !important;
+}
+
+.btn-outline-dark { 
+  border: 1px solid #f44336;
+  color: #212529
+}
+
+.btn-outline-dark:hover { 
+  border: 1px solid #f44336;
+  background-color: white;
+  color:#212529;
+}
+

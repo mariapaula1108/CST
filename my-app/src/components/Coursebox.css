@@ -5,15 +5,22 @@
     height: 100px; 
     position: relative; 
     margin: 1.5%;
-    margin-left:0%; 
+    margin-left:0;
     cursor:pointer;
     float:left;
     text-align:left; 
     padding:1.5%; 
-    text-align:center;
 
     box-sizing: border-box;
   
+}
+
+.course#select{ 
+    color: #cdcdcd;
+    background-color: #d9d9d9;
+    border-color: #cdcdcd;
+    
+
 
 }
 
@@ -32,13 +39,35 @@ h4#bootstrap-override {
     font-size: 12px;
     line-height: .5;
     margin-top:8%; 
-    font-weight:bolder;
-    
-    
+    font-weight:bolder;  
    
 
 }
 
+h5#bootstrap-override{
+    font-size: 0.75em;
+    margin-right:7%;
+    font-weight:normal;
+    margin-bottom:10%; 
+}
+
+h6#bootstrap-override{ 
+    font-size:0.50em; 
+    margin-right:7%; 
+    font-weight:normal;
+    
+}
+
+h3#bootstrap-override{ 
+    font-size:0.6rem; 
+    font-weight:bold;
+    float:right;
+    margin-bottom:0;
+    bottom:3%;
+    left:90%;
+    position:absolute;
+    
+}
 .add { 
     font-size:30px; 
     color:#999999;
@@ -65,22 +94,19 @@ p {
     color: white; 
 }
 
+.delete{ 
+    left:7%; 
+    font-size:0.7em;
+    float: left;
+    margin-bottom:0;
+    bottom:3%;
+    position:absolute;
+}
 
-
-.popup-content {
-    margin: auto;
-    background: rgb(255, 255, 255);
-    width: 50%;
-    padding: 5px;
-    border: 0.5px solid#999999;
-    border-radius: 2px;
-    transition: 0.15s ease-in-out;
-  }
-  .popup-arrow {
-    color: #cccccc;
-
-  }
-  [role='tooltip'].popup-content {
-    width: 200px;
-    
-  }
+.info { 
+    font-size:0.7em;
+    margin-bottom:0;
+    bottom:3%;
+    left:22%;
+    position:absolute;
+}

@@ -1,9 +1,7 @@
 import React from 'react'; 
 export const CourseContext = React.createContext({
-    name: '', 
-    storeName: (name: string) => {},
-    color: '', 
-    storeColor: (color: string) => {}, 
+    courseProps: {courseName:'', courseNumber: '', courseHubs:'', courseCredits:0, courseColor:''}, 
+    storeCourseProps: (name:string, num: string, hubs: string, credits: number, color:string) => {},
     selectedid: '', 
     storeId: (id: string) => {},
     delid: '',

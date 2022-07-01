@@ -14,7 +14,6 @@ interface semesterProps {
 
 
 
-
 export default function Semester(props: semesterProps) {
     const {storeCleared, storeId} = useContext(CourseContext);
 
@@ -69,11 +68,11 @@ export default function Semester(props: semesterProps) {
                 
             </div>
             {/* render courseboxes based on type of semester passed in  */}
-              <Coursebox courseColor = '#ff9897' degCourseId={props.semesterid + '1'}/>
-              <Coursebox courseColor = '#ffdbb5' degCourseId={props.semesterid + '2'}/>
-              <Coursebox courseColor = '#ff9897' degCourseId={props.semesterid + '3'}/>
-              <Coursebox courseColor = '#ffdbb5' degCourseId={props.semesterid + '4'}/>
-              <Coursebox courseColor = '#ffdbb5' degCourseId={props.semesterid + '5'}/>
+              <Coursebox courseColor = '#ff9897' degCourseId={props.semesterid + '1'} courseName='Calculus I' courseNumber='CAS MA 123' courseHubs='QR2; CRT' courseCredits={4}/>
+              <Coursebox courseColor = '#FFCD5D' degCourseId={props.semesterid + '2'} courseName='Prncp Gen Chem' courseNumber='CAS CH 131' courseHubs='SI1, QR1' courseCredits={4}/>
+              <Coursebox courseColor = '#FFDBB5' degCourseId={props.semesterid + '3'} courseName='Freshman Seminar' courseNumber='ENG EK 100' courseCredits={0}/>
+              <Coursebox courseColor = '#FFDBB5' degCourseId={props.semesterid + '4'} courseName='Progrm for Engs' courseNumber='ENG EK 125' courseHubs='QR1; CRI' courseCredits={4}/>
+              <Coursebox courseColor = '#e1efd8' degCourseId={props.semesterid + '5'} courseName='Writing Seminar' courseNumber='CAS WR 120' courseHubs='FYW' courseCredits={4}/>
     
             
         </div>

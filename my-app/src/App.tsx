@@ -10,47 +10,43 @@ import {CourseContext} from './components/CourseContext';
 
 function App() {
   // our context uses the state variables of app 
-  const [name, setName] = useState('');
-  const [color, setColor] = useState('');
   const [selectedid, setId] = useState('');
   const [delid, setDel] = useState('');
   const [clearedid, setClearedId] = useState('');
+  const [courseProps, setCourseProps] = useState({
+    courseName: '',
+    courseNumber: '',
+    courseHubs: '',
+    courseCredits: 0,
+    courseColor:'',
+ });
+  
 
-  function storeName (newname:string) { 
-    setName(name => (newname))
+ 
 
-  }
-
-  function storeColor (newcolor:string) { 
-    setColor(color => (newcolor)); 
-    console.log("Color", newcolor); 
-
-  }
   function storeId (newid:string) { 
     setId(id => (newid)); 
     // console logs for debugging purposes
     console.log("ID", newid); 
 
-
   }
-
   
 
   function storeDel (del:string) { 
     setDel(d => (del)); 
     console.log("Deleted", del); 
   
-
   }
 
   function storeCleared (cleared:string) { 
     setClearedId(i => (cleared)); 
-    console.log("Cleared planned course", cleared); 
-    console.log("Clearedid: ", clearedid)
   
   }
 
-
+  function storeCourseProps (coursename:string, coursenum:string, coursehubs:string, coursecredits:number , coursecolor:string) { 
+    setCourseProps(prevState => ({courseName: coursename, courseNumber: coursenum, courseHubs:coursehubs, courseCredits:coursecredits, courseColor:coursecolor} ) ); 
+    console.log(courseProps);
+  }
 
 
 
@@ -63,7 +59,7 @@ function App() {
           <h1> Program Planning</h1> <h3 style={{display: "inline"}}> for venika</h3> 
         </div> 
         {/* this provides an initial value for the variables and their associated functions for any children components to access*/}
-        <CourseContext.Provider value = {{name, storeName, color, storeColor, selectedid, storeId, delid,storeDel, clearedid, storeCleared}} > 
+        <CourseContext.Provider value = {{selectedid, storeId, delid,storeDel, clearedid, storeCleared, courseProps, storeCourseProps}} > 
       
         <Plan/>
         <Degree/>
