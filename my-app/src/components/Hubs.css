@@ -1,0 +1,69 @@
+.hubs#bootstrap-override { 
+    clear:both; 
+    width:100%; 
+    margin-top: 5%; 
+
+}
+
+.hubColumn#bootstrap-override { 
+    margin-top:4%; 
+    width:50%;
+    float:left; 
+
+
+}
+.checkbox { 
+    font-size: 0.85rem;
+    width:100% !important;
+    float:left !important; 
+    line-height: 1.5;
+    margin-bottom:2% !important;
+ 
+
+
+
+}
+
+b { 
+    font-size:0.85rem;
+}
+label { 
+    padding-left:1%;
+    display:inline;
+}
+
+
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+    cursor: help;
+  }
+  
+  /* Tooltip text */
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    min-width: 50%;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5%;
+    border-radius: 6px;
+    columns: auto;
+
+
+   
+
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 4%;
+    margin-left: 0px;
+  
+  }
+  
+  /* Show the tooltip text when you mouse over the tooltip container */
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }

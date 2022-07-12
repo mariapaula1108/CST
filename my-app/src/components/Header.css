@@ -1,0 +1,56 @@
+.header { 
+    background-color: #212121 !important;
+    position: fixed;
+    height: 9%;
+    width:100%;
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    z-index:1;
+}
+
+img#bootstrap-overrides  { 
+    float: left !important; 
+    position: relative !important;
+    height: 40% !important;
+    top: 50% !important; 
+    transform: translateY(-50%) !important;
+    padding-left:2% !important;
+    padding-right:2% !important;
+
+}
+
+.Draft{
+    position: absolute;
+   bottom: 18px;
+   left: 760px;
+
+
+}
+
+.SaveDraft{
+    position: absolute;
+    left: 1150px;
+    bottom: 16px;
+   
+
+}
+
+.logout { 
+    background-color: transparent;
+    position: absolute;
+    bottom:22px;
+    left: 1350px;
+    text-align: center;
+    color: white;
+    vertical-align: middle;
+    outline:none;
+    box-shadow: none;
+    border: none;
+    font-size: 100%; 
+}
+
+.logout:not(:disabled):not(.disabled) {
+    cursor: pointer;
+}
+

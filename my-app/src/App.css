@@ -1,17 +1,36 @@
 .App {
-  text-align: center;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+
+
+.App-main { 
+  clear:both;
+  width:100%;
+  position: relative; 
+  top:90px;
+  margin:1.5%;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.headline { 
+  margin-left:0.8%; 
+  margin-top:0; 
+  padding-bottom:2%;
+  border-bottom:1px solid #cccccc;
+  margin-bottom:1%;
+
+
 }
+
+h1 { 
+  display:inline;
+  font-size:2.5rem; 
+  font-weight:500; 
+}
+
+
 
 .App-header {
   background-color: #282c34;
@@ -28,11 +47,4 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+

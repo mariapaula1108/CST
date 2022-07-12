@@ -1,0 +1,36 @@
+.AddButton {
+
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    background-color: white;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 10px;
+
+}
+
+.Component {
+
+    color: white;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    background-color: darkblue;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 10px;
+
+}
+
+
+.dropdown-t{
+    color: white;
+    font-size: 13px;
+
+}
+
+.semesters-container{
+    margin-top: 10px;
+  
+}
