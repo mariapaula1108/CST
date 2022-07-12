@@ -1,8 +1,8 @@
 import React from 'react'
 import { useState } from 'react';
 import DropDown from './SemesterButton';
-import  Semester  from './Semester';
-
+import  Semester from './Semester';
+import './SemesterMenu.css'
 
 
 
@@ -35,7 +35,6 @@ const SemesterMenu: React.FC = (): JSX.Element => {
 
     const dismissHandler = (event: React.FocusEvent<HTMLButtonElement>): any => {
         if (event.currentTarget === event.target) {
-            let sem = event.currentTarget.value
             setShowDropDown(false);
         }
     };
@@ -63,23 +62,25 @@ const SemesterMenu: React.FC = (): JSX.Element => {
             })}
             
             <button 
-                className={showDropDown ? "active" : undefined}   
+                className={showDropDown ? "semMenu-open" : "semMenu"}   
                 onClick={(): void => toggleDropDown()}
                 onBlur={(e: React.FocusEvent<HTMLButtonElement>): void =>
                     dismissHandler(e)
                 }
             >
                 <div>{"Add Semester +"} </div>
+                <div>
                 {showDropDown && (
-                    <DropDown
+                    
+                   <DropDown 
                         semesterSelection={semesterSelection}
                         semesters={semesters()}
                         showDropDown={false}
                         toggleDropDown={(): void => toggleDropDown()}
-
-
                     />
+                    
                 )}
+                </div>
             </button>
            
         </>

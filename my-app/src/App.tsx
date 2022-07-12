@@ -5,7 +5,7 @@ import Header from './components/Header';
 import Plan from './components/Plan';
 import Degree from './components/Degree';
 import {CourseContext} from './components/CourseContext'; 
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 function App() {
